@@ -1,0 +1,50 @@
+.form {
+  display: flex;
+  flex: 75%;
+  /* justify-content: space-between; */
+  gap: 40px;
+  align-items: center;
+}
+#navbar {
+  padding: 0 35px;
+}
+.form-select {
+  width: 200px;
+}
+#input {
+  width: 280px;
+}
+#input::placeholder {
+  font-size: 17px;
+}
+/* .para {
+  flex: 25%;
+  text-align: end;
+} */
+.para p {
+  border: 0.5px solid black;
+  width: 180px;
+  height: 45px;
+  background-color: coral;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  line-height: 45px;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+.table {
+  width: 90%;
+  margin: auto;
+}
+.refresh {
+  background-color: rgb(17, 17, 125);
+  color: azure;
+  width: 50px;
+  height: 33px;
+  border-radius: 10px;
+}
+#tr:hover {
+  background-color: beige;
+  cursor: pointer;
+}

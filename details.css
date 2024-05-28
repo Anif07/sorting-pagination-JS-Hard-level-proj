@@ -1,0 +1,25 @@
+.row {
+  display: flex;
+
+  align-items: center;
+  border-bottom: 2px dotted black;
+}
+.Container {
+  width: 80%;
+  margin: auto;
+}
+.main-heading {
+  font-size: 40px;
+  color: rgb(186, 82, 7);
+}
+.details {
+  flex: 1;
+  text-align: center;
+}
+.heading {
+  width: 250px;
+  color: rgb(8, 89, 239);
+}
+.colon {
+  font-size: 30px;
+}

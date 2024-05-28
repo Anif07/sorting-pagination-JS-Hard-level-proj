@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtering Data</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="d-flex my-4 mx-5 justify-content-between" id="navbar">
+      <form class="form">
+        <input
+          type="text"
+          name="input"
+          id="input"
+          class="form-control"
+          placeholder="Search by Name"
+        />
+        <select
+          name="filterBy"
+          id="FilterBy"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option value="name">Name</option>
+          <option value="age">Age</option>
+          <option value="gender">Gender</option>
+          <option value="city">City</option>
+          <option value="idNumber">Id Number</option>
+          <option value="phoneNumber">Phone Number</option>
+          <option value="dateOfRegistration">Date of Registration</option>
+        </select>
+        <input
+          type="submit"
+          class="btn btn-primary"
+          id="searchButton"
+          value="Search"
+        />
+        <button class="refresh" id="refresh">
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
+      </form>
+      <div class="para">
+        <p>All Documents : <span id="list">0</span></p>
+      </div>
+    </div>
+    <div>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Student Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Id Number</th>
+            <th>Date of Registration</th>
+            <th>City</th>
+            <th>Phone Number</th>
+            <!-- <th>Action</th> -->
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
