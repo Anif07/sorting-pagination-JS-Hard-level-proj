@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <div class="d-flex my-4 mx-5 justify-content-between" id="navbar">
+    <div id="navbar">
       <form class="form">
         <input
           type="text"
@@ -48,38 +48,109 @@
           <option value="phoneNumber">Phone Number</option>
           <option value="dateOfRegistration">Date of Registration</option>
         </select>
-        <input
-          type="submit"
-          class="btn btn-primary"
-          id="searchButton"
-          value="Search"
-        />
-        <button class="refresh" id="refresh">
-          <i class="fa-solid fa-rotate-right"></i>
-        </button>
+        <div class="search-refresh">
+          <input
+            type="submit"
+            class="btn btn-primary"
+            id="searchButton"
+            value="Search"
+          />
+          <button class="refresh" id="refresh">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+        </div>
       </form>
-      <div class="para">
-        <p>All Documents : <span id="list">0</span></p>
+      <div class="para-parent">
+        <p class="para">All Documents : <span id="list">0</span></p>
       </div>
     </div>
-    <div>
-      <table class="table table-hover">
+    <div id="table-container">
+      <table class="tablee table-hover">
         <thead>
           <tr>
             <th>S.No</th>
-            <th>Student Name</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Id Number</th>
-            <th>Date of Registration</th>
-            <th>City</th>
-            <th>Phone Number</th>
-            <!-- <th>Action</th> -->
+            <th>
+              <div class="head">
+                Student Name
+                <div class="icons">
+                  <button class="butnAsc" id="sortNameAsc">&#x25b4;</button>
+                  <button class="butnDesc" id="sortNameDesc">&#x25be;</button>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="head">
+                Age
+                <div class="icons">
+                  <button class="butnAsc" id="sortAgeAsc">&#x25b4;</button>
+                  <button class="butnDesc" id="sortAgeDesc">&#x25be;</button>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="head">
+                Gender
+                <div class="icons">
+                  <button class="butnAsc" id="sortGenderAsc">&#x25b4;</button>
+                  <button class="butnDesc" id="sortGenderDesc">&#x25be;</button>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="head">
+                Id Number
+                <div class="icons">
+                  <button class="butnAsc" id="sortIdNumberAsc">&#x25b4;</button>
+                  <button class="butnDesc" id="sortIdNumberDesc">
+                    &#x25be;
+                  </button>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="head">
+                Date of Registration
+                <div class="icons">
+                  <button class="butnAsc" id="sortNDateofRegistrationAsc">
+                    &#x25b4;
+                  </button>
+                  <button class="butnDesc" id="sortNDateofRegistrationDesc">
+                    &#x25be;
+                  </button>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="head">
+                City
+                <div class="icons">
+                  <button class="butnAsc" id="sortCityAsc">&#x25b4;</button>
+                  <button class="butnDesc" id="sortCityDesc">&#x25be;</button>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="head">
+                Phone Number
+                <!-- <div class="icons">
+                  <button class="butnAsc" id="sortPhoneNumberAsc">
+                    &#x25b4;
+                  </button>
+                  <button class="butnDesc" id="sortPhoneNumberDesc">
+                    &#x25be;
+                  </button>
+                </div> -->
+              </div>
+            </th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody id="tableBody"></tbody>
       </table>
+      <h1 id="notFound"></h1>
+      <h1 id="loading"></h1>
     </div>
+    <div id="pagination-controls"></div>
     <script src="./index.js"></script>
   </body>
 </html>

@@ -1,25 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.main {
+  width: 100%;
+}
 .row {
   display: flex;
-
   align-items: center;
   border-bottom: 2px dotted black;
+  margin: 6px 0;
+}
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 .Container {
-  width: 80%;
+  width: 60%;
   margin: auto;
+  background-color: #efede9;
+  border: 1px solid black;
+  box-shadow: 1px 1px 5px rgb(57, 56, 56), -1px -1px 5px rgb(57, 56, 56);
+  padding: 20px;
 }
 .main-heading {
-  font-size: 40px;
+  font-size: 32px;
   color: rgb(186, 82, 7);
+  display: flex;
+  margin-bottom: 25px;
 }
 .details {
   flex: 1;
   text-align: center;
+  font-size: 18px;
+  font-weight: 600;
 }
 .heading {
   width: 250px;
   color: rgb(8, 89, 239);
+  font-size: 1.4rem;
 }
 .colon {
   font-size: 30px;
+}
+#icon {
+  margin-left: 20%;
+  margin-bottom: 15px;
+  color: black;
+  font-weight: 400;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  margin-right: 20px;
+}
+#icon span {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 780px) {
+  .Container {
+    width: 80%;
+  }
+  .heading {
+    width: 210px;
+    font-size: 1.2rem;
+  }
+  .details {
+    font-size: 1rem;
+  }
+  #icon {
+    margin-left: 10%;
+    width: 40px;
+    height: 40px;
+  }
+  #icon span {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Container {
+    width: 80%;
+  }
+  .heading {
+    width: 180px;
+    font-size: 1.1rem;
+  }
+  .details {
+    font-size: 1rem;
+  }
+  #icon {
+    width: 40px;
+    height: 40px;
+  }
+  #icon span {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .Container {
+    width: 80%;
+  }
+  .main-heading {
+    font-size: 25px;
+  }
+  .colon {
+    font-size: 24px;
+  }
+  .heading {
+    width: 110px;
+    font-size: 0.9rem;
+  }
+  .details {
+    font-size: 0.8rem;
+  }
+  #icon {
+    width: 40px;
+    height: 40px;
+  }
+  #icon span {
+    font-size: 20px;
+  }
 }
