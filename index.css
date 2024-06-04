@@ -145,7 +145,7 @@ td {
   border-radius: 45px;
   animation: loading;
   animation-duration: 4s;
-  animation-delay: -1sec;
+  animation-delay: -1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -326,5 +326,24 @@ td {
     line-height: 35px;
     font-size: 0.8rem;
     justify-self: center;
+  }
+  #noOfStudents {
+    width: 70px;
+    height: 32px;
+    border: 1px solid rgb(53, 118, 193);
+    border-radius: 10px;
+    padding: 3px 2px;
+    font-size: 12px;
+  }
+  #pageBtn {
+    width: 27px;
+    height: 27px;
+    border-radius: 5px;
+    /* border: 1px solid gray; */
+    border: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4px;
   }
 }
