@@ -145,10 +145,30 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody id="tableBody"></tbody>
+        <tbody id="tableBody">
+          <tr id="trhover">
+            <td colspan="9">
+              <div id="loadingDiv">
+                <img
+                  id="loadImg"
+                  src="./Assets/loading-circles-blue-gradient_78370-2646.jpg"
+                  alt=""
+                />
+              </div>
+              <br />
+              loading...... please wait
+            </td>
+          </tr>
+          <!-- <tr id="notFound">
+            <td colspan="9">Records Not Found</td>
+          </tr>
+          <tr id="loading">
+            <td colspan="9">Loading .......</td>
+          </tr> -->
+        </tbody>
       </table>
       <h1 id="notFound"></h1>
-      <h1 id="loading"></h1>
+      <!-- <h1 id="loading"></h1> -->
     </div>
     <div id="pagination-controls"></div>
     <script src="./index.js"></script>

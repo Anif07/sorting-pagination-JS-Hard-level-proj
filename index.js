@@ -5,7 +5,6 @@ let StudentsPerPage = 10;
 let displayingStudents = Students;
 
 function fetchHandler() {
-  document.getElementById("loading").innerText = "loading....";
   fetch("https://json-server-8qp6.onrender.com/Students")
     .then((response) => {
       if (!response.ok) {
@@ -18,10 +17,9 @@ function fetchHandler() {
       filteredStudents = data;
       tableInsertHandler(filteredStudents);
       console.log(Students);
-      document.getElementById("loading").innerText = "";
     })
     .catch((error) => {
-      console.log(error);
+      console.log(error.message);
     });
 }
 fetchHandler();
@@ -35,6 +33,8 @@ function tableInsertHandler(students) {
   index = start;
   const end = currentPage * StudentsPerPage;
   slicedStudents = students.slice(start, end);
+  const notFound = document.getElementById("notFound");
+
   if (students && students.length > 0) {
     slicedStudents.forEach((obj) => {
       const tr = document.createElement("tr");
@@ -52,13 +52,18 @@ function tableInsertHandler(students) {
         }">Details</button></td>
       `;
       tablebody.appendChild(tr);
-      const notFound = document.getElementById("notFound");
-      notFound.innerText = "";
       index++;
     });
+    if (notFound) {
+      notFound.innerText = "";
+    }
   } else {
-    const notFound = document.getElementById("notFound");
-    notFound.innerText = "No records Found";
+    if (notFound) {
+      // notFound.style.display = "block";
+      notFound.innerText = "No Records Found";
+      table = document.getElementsByClassName("tablee")[0];
+      table.style.height = "auto";
+    }
   }
   NoOfDocuments.innerText = students.length;
   attachEventHandler();

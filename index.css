@@ -138,7 +138,38 @@ td {
   text-align: center;
   font-size: 30px;
 }
+#loadingDiv {
+}
+#loadImg {
+  width: 90px;
+  border-radius: 45px;
+  animation: loading;
+  animation-duration: 4s;
+  animation-delay: -1sec;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#trhover:hover {
+  background-color: white;
+}
 
+/* #notFound {
+  display: none;
+} */
+/* .noneFound {
+  display: block;
+} */
+/* #loading {
+  display: none;
+} */
 #sortUp:hover,
 #sortDown:hover {
   color: rgb(53, 118, 193);
