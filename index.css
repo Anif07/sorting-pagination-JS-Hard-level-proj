@@ -129,16 +129,11 @@ td {
   justify-content: space-around;
   align-items: center;
 }
-.icons i::before {
-  /* content: "\f0de "; */
-}
 #notFound,
 #loading {
   margin: 25px;
   text-align: center;
   font-size: 30px;
-}
-#loadingDiv {
 }
 #loadImg {
   width: 90px;
@@ -233,6 +228,86 @@ td {
   justify-self: flex-start;
 }
 
+#citySearchIconDiv {
+  position: relative;
+}
+.citySearch {
+  display: none;
+  background-color: white;
+  width: 200px;
+  padding: 10px;
+  position: absolute;
+  top: 34px;
+  left: -175px;
+  border-radius: 10px;
+}
+.searchBtn {
+  padding: 3px 5px;
+  margin-top: 7px;
+}
+.input {
+  border: 1px solid rgb(53, 106, 198);
+}
+.search {
+  background-color: #30cdec;
+  border: 1px solid gray;
+  color: black;
+  font-weight: 500;
+  border-radius: 10px;
+}
+.reset,
+.cancel {
+  color: black;
+  border: 1px solid gray;
+  font-weight: 500;
+  border-radius: 10px;
+}
+.searchDisplay {
+  display: block;
+  background-color: white;
+  width: 200px;
+  padding: 10px;
+  position: absolute;
+  top: 34px;
+  left: -175px;
+  border-radius: 10px;
+}
+
+.cityError {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 403px;
+  background-color: white;
+  padding: 12px 7px;
+  border-top: 2px solid rgb(211, 77, 77);
+  box-shadow: 1px 1px 5px black;
+  border-radius: 6px;
+}
+.cityErrorDisplay {
+  display: block;
+  position: absolute;
+  top: 45px;
+  right: 403px;
+  background-color: white;
+  padding: 12px 7px;
+  border-top: 2px solid rgb(211, 77, 77);
+  box-shadow: 1px 1px 5px black;
+  border-radius: 6px;
+}
+.cityError h2 {
+  font-size: 17px;
+  margin: 0;
+}
+.cityError i {
+  color: rgb(228, 115, 115);
+  margin-right: 5px;
+}
+.cityError span {
+  color: green;
+  margin-left: 20px;
+  cursor: pointer;
+}
 @media screen and (max-width: 1080px) {
   .form {
     gap: 15px;

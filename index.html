@@ -127,6 +127,46 @@
                   <button class="butnAsc" id="sortCityAsc">&#x25b4;</button>
                   <button class="butnDesc" id="sortCityDesc">&#x25be;</button>
                 </div>
+                <div id="citySearchIconDiv">
+                  <i
+                    class="fa-solid fa-magnifying-glass"
+                    id="citySearchIcon"
+                  ></i>
+                  <div class="citySearch">
+                    <form action="" onclick="citySubmitHandler(event)">
+                      <div>
+                        <input
+                          class="form-control input"
+                          type="text"
+                          placeholder="Enter city"
+                          name="city"
+                          id="city"
+                        />
+                      </div>
+                      <div>
+                        <input
+                          class="searchBtn search"
+                          type="button"
+                          value="search"
+                          id="citySearchBtn"
+                        />
+                        <input
+                          class="searchBtn reset"
+                          type="reset"
+                          value="reset"
+                          id="resetBtn"
+                        />
+                        <button
+                          class="searchBtn cancel"
+                          type="button"
+                          id="cancelBtn"
+                        >
+                          cancel
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
             </th>
             <th>
@@ -171,6 +211,12 @@
       <!-- <h1 id="loading"></h1> -->
     </div>
     <div id="pagination-controls"></div>
+    <div class="cityError">
+      <h2>
+        <i class="fa-regular fa-face-frown"></i> please enter City name
+        <span class="fa-solid fa-xmark" id="cancelError"></span>
+      </h2>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>

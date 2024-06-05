@@ -102,7 +102,6 @@ document.getElementById("refresh").addEventListener("click", (event) => {
   event.preventDefault();
   currentPage = 1;
   filteredStudents = Students;
-  // displayingStudents = [];
   tableInsertHandler(Students);
 
   document.getElementById("FilterBy").value = "name";
@@ -110,6 +109,10 @@ document.getElementById("refresh").addEventListener("click", (event) => {
   inputField.value = "";
   inputField.type = "text";
   inputField.placeholder = "Search by name";
+  cityBox = document.getElementsByClassName("searchDisplay")[0];
+  if (cityBox) {
+    cityBox.classList = "citySearch";
+  }
 });
 
 function attachEventHandler() {
@@ -151,6 +154,54 @@ function noOfStudents(e) {
   console.log(e);
   tableInsertHandler(displayingStudents);
 }
+
+function searchIcon() {
+  const searchBox = document.getElementsByClassName("citySearch")[0];
+  searchBox.classList.toggle("searchDisplay");
+}
+
+const citySearchIcon = document.getElementById("citySearchIcon");
+citySearchIcon.addEventListener("click", searchIcon);
+
+function citySubmitHandler(event) {
+  event.preventDefault();
+}
+
+const citySearchBtn = document.getElementById("citySearchBtn");
+citySearchBtn.addEventListener("click", () => {
+  const value = document.getElementById("city").value;
+  if (value) {
+    const error = document.getElementsByClassName("cityError")[0];
+    error.classList = "cityError";
+    const res = displayingStudents.filter(
+      (obj) => obj["city"].toLowerCase() == value.toLowerCase()
+    );
+    const searchBox = document.getElementsByClassName("citySearch")[0];
+    searchBox.classList.toggle("searchDisplay");
+    document.getElementById("city").value = "";
+    tableInsertHandler(res);
+  } else {
+    const error = document.getElementsByClassName("cityError")[0];
+    error.classList.toggle("cityErrorDisplay");
+    setTimeout(() => {
+      error.classList = "cityError";
+    }, 3000);
+  }
+});
+
+document.getElementById("cancelError").addEventListener("click", () => {
+  const error = document.getElementsByClassName("cityError")[0];
+  error.classList.toggle("cityErrorDisplay");
+});
+
+document.getElementById("cancelBtn").addEventListener("click", () => {
+  const searchBox = document.getElementsByClassName("citySearch")[0];
+  searchBox.classList.toggle("searchDisplay");
+});
+
+document.getElementById("resetBtn").addEventListener("click", () => {
+  document.getElementById("city").value = "";
+});
 
 function renderPaginationControls(students) {
   const paginationContainer = document.getElementById("pagination-controls");
