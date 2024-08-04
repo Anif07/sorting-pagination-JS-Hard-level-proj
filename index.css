@@ -62,7 +62,7 @@ td {
 .tablee {
   width: 100%;
   min-width: 1000px;
-  height: 490px;
+  /* height: 490px; */
   overflow: auto;
   margin: 0 auto;
   text-align: center;
@@ -129,6 +129,10 @@ td {
   justify-content: space-around;
   align-items: center;
 }
+/* #loadingDiv {
+  display: flex;
+  flex-direction: column;
+} */
 #notFound,
 #loading {
   margin: 25px;
@@ -320,6 +324,9 @@ td {
 @media screen and (max-width: 992px) {
 }
 @media screen and (max-width: 860px) {
+  #loadingDiv {
+    margin-right: 200px;
+  }
   #input {
     width: 200px;
   }
@@ -344,6 +351,12 @@ td {
   }
 }
 @media screen and (max-width: 768px) {
+  #loadingDiv {
+    margin-right: 380px;
+  }
+  #loadImg {
+    width: 75px;
+  }
   .form {
     flex-direction: column;
     align-items: flex-start;
@@ -359,6 +372,12 @@ td {
   }
 }
 @media screen and (max-width: 576px) {
+  #loadingDiv {
+    margin-right: 450px;
+  }
+  #loadImg {
+    width: 70px;
+  }
   .tablee {
     font-size: 0.85rem;
   }
@@ -377,6 +396,12 @@ td {
   }
 }
 @media screen and (max-width: 460px) {
+  #loadingDiv {
+    margin-right: 550px;
+  }
+  #loadImg {
+    width: 65px;
+  }
   #navbar {
     flex-direction: column;
     align-items: center;
@@ -420,5 +445,13 @@ td {
     justify-content: center;
     align-items: center;
     margin: 0 4px;
+  }
+}
+@media screen and (max-width: 460px) {
+  #loadingDiv {
+    margin-right: 680px;
+  }
+  #loadImg {
+    width: 60px;
   }
 }
